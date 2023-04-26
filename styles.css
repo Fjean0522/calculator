@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    /* border: 1px solid; */
 }
 
 body {
@@ -29,8 +28,8 @@ body {
 .display {
     background-color: rgb(236, 236, 236);
     height: 100px;
-    width: 320px;
-    margin: 18px 24px 6px 24px;
+    width: 345px;
+    margin: 18px 22px 2px 12px;
     border-radius: 8px;
 }
 
