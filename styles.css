@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
+    /* border: 1px solid; */
 }
 
 body {
     background-color: rgb(235, 238, 238);
     margin: 0px;
+    font-family: sans-serif;
 }
 
 
@@ -16,7 +18,8 @@ body {
 
 .calculator-body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
     background-color: rgb(153, 154, 155);
     height: 475px;
     width: 370px;
@@ -32,6 +35,29 @@ body {
 }
 
 /* BUTTONS */
-.clr-dlt {
-    
+.clr-dlt,
+.num7-9-operand, 
+.num4-6-operand, 
+.num1-3-operand, 
+.num0-operand  {
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 1rem; */
+    font-weight: bold;
+
 }
+
+#clr, #dlt {
+    height: 50px;
+    width: 175px;
+    padding: 16px 20px 16px 67px;
+}
+
+#clr {
+    background-color: rgb(209, 106, 106);
+}
+
+#dlt {
+    background-color: rgb(120, 155, 236);
+}
+
