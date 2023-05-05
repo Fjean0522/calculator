@@ -1,20 +1,7 @@
-/*
-let operand1;
-let operator;
-let operand2;
-
-const add = (operand1, operand2) => operand1 + operand2;
-const subtract = (operand1, operand2) => operand1 - operand2;
-const multiply = (operand1, operand2) => operand1 * operand2;
-const divide = (operand1, operand2) => operand1 / operand2;
-*/
-
-
 const buttons = document.querySelectorAll('button')
 const display = document.querySelector('.display')
 
 let calculation = [];
-let noComa;
 let newCalculation;
 
 function calculate(button) {
@@ -28,12 +15,11 @@ function calculate(button) {
         newCalculation = calculation.join('') 
         display.textContent = newCalculation
     } else if (value === '=') {
-        display.textContent = eval(noComa)
+        display.textContent = eval(newCalculation)
     } else {
         calculation.push(value)
-        noComa = calculation.join('') 
-        display.textContent = noComa 
-        console.log(calculation)
+        newCalculation = calculation.join('') 
+        display.textContent = newCalculation 
     }
 }
 
