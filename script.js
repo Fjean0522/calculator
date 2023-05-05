@@ -15,13 +15,26 @@ const display = document.querySelector('.display')
 
 let calculation = [];
 let noComa;
+let newCalculation;
 
-function calculate(button){
+function calculate(button) {
     const value = button.textContent
-    calculation.push(value)
-    noComa = calculation.join('') 
-    display.textContent = noComa 
-    console.log(calculation)
+    
+    if (value === 'Clear') {
+        calculation = [];
+        display.textContent = calculation
+    } else if (value === 'Delete') {
+        calculation.pop();
+        newCalculation = calculation.join('') 
+        display.textContent = newCalculation
+    } else if (value === '=') {
+        display.textContent = eval(noComa)
+    } else {
+        calculation.push(value)
+        noComa = calculation.join('') 
+        display.textContent = noComa 
+        console.log(calculation)
+    }
 }
 
 buttons.forEach(button => button.addEventListener('click', (e) => calculate(button)))
