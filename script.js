@@ -12,9 +12,7 @@ const calculate = (button) => {
         display.textContent = equation
     } else if (value === 'Delete') {
         equation.pop()  // removes last item in the equation
-
         newEquation = equation.join('')  // removes commas between items in array 
-
         display.textContent = newEquation
     } else if (value === '=') {
         display.textContent = eval(newEquation) // evaluates operands & operators in array & return/display answer 
