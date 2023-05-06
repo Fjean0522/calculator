@@ -1,25 +1,25 @@
-const buttons = document.querySelectorAll('button')
 const display = document.querySelector('.display')
+const buttons = document.querySelectorAll('button')
 
-let calculation = [];
-let newCalculation;
+let equation = []
+let newEquation;
 
-function calculate(button) {
+const calculate = (button) => {
     const value = button.textContent
     
     if (value === 'Clear') {
-        calculation = [];
-        display.textContent = calculation
+        equation = []
+        display.textContent = equation
     } else if (value === 'Delete') {
-        calculation.pop();
-        newCalculation = calculation.join('') 
-        display.textContent = newCalculation
+        equation.pop()
+        newEquation = equation.join('')
+        display.textContent = newEquation
     } else if (value === '=') {
-        display.textContent = eval(newCalculation)
+        display.textContent = eval(newEquation)
     } else {
-        calculation.push(value)
-        newCalculation = calculation.join('') 
-        display.textContent = newCalculation 
+        equation.push(value)
+        newEquation = equation.join('')
+        display.textContent = newEquation
     }
 }
 
